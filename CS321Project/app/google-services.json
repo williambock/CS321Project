@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "98310408498",
+    "project_id": "cs321project-d13f2",
+    "storage_bucket": "cs321project-d13f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98310408498:android:2ae29be7dbeb3665cb2f2b",
+        "android_client_info": {
+          "package_name": "com.example.cs321project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98310408498-3a33jsuurmlp37rc82br5cu6ukphp5n8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cs321project",
+            "certificate_hash": "ad968fd26a3be6cbf1af2b9d003ec593953a04ee"
+          }
+        },
+        {
+          "client_id": "98310408498-chiaompf56755e7gcih70trl02terdk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0UOAGGOnct4DwJkt_2JuUnF58HAuhQNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98310408498-chiaompf56755e7gcih70trl02terdk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
