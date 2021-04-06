@@ -29,7 +29,18 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        if(position == 0) {
+            return Home.newInstance("Home1", "Home2");
+        }
+        else if(position == 1) {
+            return Recent.newInstance("Home1", "Home2");
+        }
+        else if(position == 2) {
+            return Messages.newInstance("Home1", "Home2");
+        }
+        else {
+            return Settings.newInstance("Home1", "Home2");
+        }
     }
 
     @Nullable
