@@ -24,7 +24,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="" />
+    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project/Login_Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,8 +82,12 @@
       <list>
         <option value="resourceFile" />
         <option value="valueResourceFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pAuygMX675JZShRrt68Yfigl8x" />
   <component name="ProjectViewState">
@@ -88,7 +99,13 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-06T22:23:22.373Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../321 Project" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-631024551">
+      <recent name="com.example.project.ui.main" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -170,9 +187,22 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617761179490">
+      <screen x="0" y="25" width="1680" height="935" />
+    </state>
+    <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.935@0.25.1680.935" timestamp="1617761179490" />
     <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1617746817183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
