@@ -25,10 +25,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,10 +200,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617761179490">
-      <screen x="0" y="25" width="1680" height="935" />
+    <state x="621" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617906405143">
+      <screen x="0" y="25" width="1680" height="938" />
     </state>
     <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.935@0.25.1680.935" timestamp="1617761179490" />
+    <state x="621" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.938@0.25.1680.938" timestamp="1617906405143" />
     <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1617746817183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,6 +241,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="884" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617747771061" />
+    <state x="630" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617906575740">
+      <screen x="0" y="25" width="1680" height="938" />
+    </state>
+    <state x="630" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.938@0.25.1680.938" timestamp="1617906575740" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1617746313399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
