@@ -23,4 +23,9 @@
     <string name="CreateAccount"> Create Account</string>
     <string name="CreateMessage"> Click here to Create Account</string>
     <string name="title_activity_register_user">RegisterUser</string>
+    <string name="sync_header">Sync</string>
+    <string name="sync_title">Title</string>
+    <string name="attachment_summary_off">Attachment Summary Off</string>
+    <string name="attachment_summary_on">attachment_summary_on</string>
+    <string name="attachment_title">string/attachment_title</string>
 </resources>
