@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="General">
+
+        <EditTextPreference
+            app:key="version"
+            app:title="Version"
+            app:defaultValue="1.0"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="Notification">
+        <SeekBarPreference
+            android:key="volume"
+            app:defaultValue="75"
+            app:showSeekBarValue="true"
+            app:title="Volume" />
+        <SwitchPreferenceCompat
+            android:summaryOff="You will still receive notifications"
+            android:summaryOn="No longer receive notifications"
+            app:key="notification"
+            app:title="Message Notifications" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
