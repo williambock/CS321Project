@@ -25,9 +25,9 @@ public class SettingsActivity extends AppCompatActivity {
                     .commit();
         }
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
+     
             actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        
 
         // check frame layout is empty or not.
         if (findViewById(R.id.idFrameLayout) != null) {
@@ -37,6 +37,11 @@ public class SettingsActivity extends AppCompatActivity {
 
             getFragmentManager().beginTransaction().add(R.id.idFrameLayout, new RealSetting()).commit();
         }
+    }
+        public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(intent, 0);
+        return true;
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
