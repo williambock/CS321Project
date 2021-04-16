@@ -2074,7 +2074,6 @@ id line3
 id linear
 id listMode
 id list_item
-id main_bar
 id main_container
 id masked
 id material_clock_display

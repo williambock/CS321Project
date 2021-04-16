@@ -25,6 +25,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Project" >
         <activity android:name="com.example.project.PostActivity" />
+        <activity android:name="com.example.project.SettingsActivity" />
         <activity
             android:name="com.example.project.RegisterUser"
             android:label="@string/title_activity_register_user"

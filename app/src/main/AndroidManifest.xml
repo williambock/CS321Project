@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity android:name=".PostActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
         <activity
             android:name=".RegisterUser"
             android:label="@string/title_activity_register_user"

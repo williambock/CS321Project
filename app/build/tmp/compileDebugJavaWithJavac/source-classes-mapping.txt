@@ -22,10 +22,9 @@ com/example/project/PostActivity.java
  com.example.project.PostActivity
  com.example.project.PostActivity$1
  com.example.project.PostActivity$2
-com/example/project/MainActivity.java
- com.example.project.MainActivity
- com.example.project.MainActivity$1
- com.example.project.MainActivity$2
+com/example/project/SettingsActivity.java
+ com.example.project.SettingsActivity
+ com.example.project.SettingsActivity$SettingsFragment
 com/example/project/Settings.java
  com.example.project.Settings
 com/example/project/Home.java
@@ -41,8 +40,9 @@ com/example/project/ui/main/Home.java
 com/example/project/ui/main/PageViewModel.java
  com.example.project.ui.main.PageViewModel
  com.example.project.ui.main.PageViewModel$1
+com/example/project/MainActivity.java
+ com.example.project.MainActivity
+ com.example.project.MainActivity$1
+ com.example.project.MainActivity$2
 com/example/project/ui/main/SectionsPagerAdapter.java
  com.example.project.ui.main.SectionsPagerAdapter
-com/example/project/SettingsActivity.java
- com.example.project.SettingsActivity
- com.example.project.SettingsActivity$SettingsFragment
