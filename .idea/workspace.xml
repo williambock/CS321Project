@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="" />
+    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -324,10 +326,11 @@
     <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.932@0.25.1680.932" timestamp="1617930977310" />
     <state x="621" y="226" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.935@0.25.1680.935" timestamp="1617761179490" />
     <state x="621" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.938@0.25.1680.938" timestamp="1617906405143" />
-    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1617746817183">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="81" y="108" width="1519" height="775" key="AVDManager" timestamp="1618583896844">
+      <screen x="0" y="25" width="1680" height="941" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1617746817183" />
+    <state x="81" y="108" width="1519" height="775" key="AVDManager/0.25.1680.941@0.25.1680.941" timestamp="1618583896844" />
     <state x="540" y="274" key="AndroidCreateResourceDirectoryDialog" timestamp="1617744997209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
