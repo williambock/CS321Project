@@ -8,12 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 public class PostActivity extends AppCompatActivity {
 
     private Button UpdatePostButton;  //Button to Submit a Post
     private Button BackToMainButton;  //Button to send user back to main
     private EditText NewPostText;     //Spot to enter text
     private String NewPostTextString; //String value for the text put in NewPostText
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseUser currentFirebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +75,13 @@ public class PostActivity extends AppCompatActivity {
         startActivity(MainActivityIntent);
     }
     /*
-     * Is intended to store the message (wherever that is)
+     * Is intended to store the message to a firebase collection "messages"
      */
     private void StorePostToStorage() {
-        //Send the post to the storage space
-        //Not yet implemented
+         currentFirebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+        String post = NewPostTextString;
+        String userID = currentFirebaseUser.getUid();
+        Post message = new Post(post, userID);
+        db.collection("messages").add(message);
     }
 }
