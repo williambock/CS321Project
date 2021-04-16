@@ -27,4 +27,9 @@
     <string name="post">Post</string>
     <string name="back">Back</string>
     <string name="enter_your_post_here">Enter Your Post Here!</string>
+    <string name="sync_header">Sync</string>
+    <string name="sync_title">Title</string>
+    <string name="attachment_summary_off">Attachment Summary Off</string>
+    <string name="attachment_summary_on">attachment_summary_on</string>
+    <string name="attachment_title">string/attachment_title</string>
 </resources>

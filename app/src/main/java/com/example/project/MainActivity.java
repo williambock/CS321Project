@@ -1,10 +1,10 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.view.View;
 import android.widget.Button;
-import android.content.Intent;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,6 +23,8 @@ import com.example.project.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button settingsBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +39,25 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent NewPostIntent = new Intent(MainActivity.this, PostActivity.class);
-                startActivity(NewPostIntent);
+                newPostActivity();
+            }
+        });
+
+        settingsBtn = findViewById(R.id.idBtnSettings);
+
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(i);
             }
         });
     }
+
+    private void newPostActivity() {
+        Intent newPostIntent = new Intent(MainActivity.this, PostActivity.class);
+        startActivity(newPostIntent);
+    }
+
 }
