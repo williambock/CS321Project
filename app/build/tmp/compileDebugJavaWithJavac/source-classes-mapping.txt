@@ -21,6 +21,7 @@ com/example/project/RegisterUser.java
 com/example/project/PostActivity.java
  com.example.project.PostActivity
  com.example.project.PostActivity$1
+ com.example.project.PostActivity$2
 com/example/project/MainActivity.java
  com.example.project.MainActivity
  com.example.project.MainActivity$1
