@@ -24,7 +24,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="" />
+    <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -368,9 +373,10 @@
       <screen x="0" y="25" width="1680" height="938" />
     </state>
     <state x="630" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.938@0.25.1680.938" timestamp="1617906575740" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1617746313399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="539" y="242" key="run.anything.popup" timestamp="1618680095469">
+      <screen x="0" y="25" width="1680" height="938" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617746313399" />
+    <state x="539" y="242" key="run.anything.popup/0.25.1680.938@0.25.1680.938" timestamp="1618680095469" />
   </component>
 </project>

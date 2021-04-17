@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "EmailPassword";
     private EditText email, password;
-    private Button signIn, createAccount;
+    private Button signIn, createAccount, reset;
     private FirebaseAuth mAuth;
 
     @Override
@@ -47,6 +47,13 @@ public class LoginActivity extends AppCompatActivity {
                 registerUser();
             }
         });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgotPass();
+            }
+        });
     }
 
     private void registerUser(){
@@ -54,6 +61,25 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void forgotPass(){
+        String userEmail;
+        userEmail=email.getText().toString();
+        if(TextUtils.isEmpty(userEmail)){
+            Toast.makeText(getApplicationContext(), "Please Enter email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        mAuth.sendPasswordResetEmail(userEmail)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Log.d(TAG, "Email sent.");
+                            Toast.makeText(LoginActivity.this, "The Link has been sent to your email", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+    
     private void loginUser(){
         String userEmail, userPass;
         userEmail=email.getText().toString();
@@ -94,5 +120,6 @@ public class LoginActivity extends AppCompatActivity {
         password=findViewById(R.id.UserPassword);
         signIn =findViewById(R.id.SignInButton);
         createAccount=findViewById(R.id.CreateAccount);
+        reset=findViewById(R.id.ForgotButton);
     }
 }
