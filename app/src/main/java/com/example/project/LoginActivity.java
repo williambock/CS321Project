@@ -32,8 +32,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-
-        initialize();
+        email=findViewById(R.id.UserEmail);
+        password=findViewById(R.id.UserPassword);
+        signIn =findViewById(R.id.SignInButton);
+        createAccount=findViewById(R.id.CreateAccount);
+        reset=findViewById(R.id.ForgotButton);
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,13 +116,5 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
-    }
-
-    private void initialize(){
-        email=findViewById(R.id.UserEmail);
-        password=findViewById(R.id.UserPassword);
-        signIn =findViewById(R.id.SignInButton);
-        createAccount=findViewById(R.id.CreateAccount);
-        reset=findViewById(R.id.ForgotButton);
     }
 }

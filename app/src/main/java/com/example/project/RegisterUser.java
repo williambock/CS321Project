@@ -32,8 +32,9 @@ public class RegisterUser extends AppCompatActivity {
             //startActivity(intent);
 
             mAuth = FirebaseAuth.getInstance();
-
-            initialize();
+            email=findViewById(R.id.Email);
+            password=findViewById(R.id.Password);
+            register =findViewById(R.id.Register);
 
             register.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -74,11 +75,5 @@ public class RegisterUser extends AppCompatActivity {
                             }
                         }
                     });
-        }
-
-        private void initialize(){
-            email=findViewById(R.id.Email);
-            password=findViewById(R.id.Password);
-            register =findViewById(R.id.Register);
         }
     }
