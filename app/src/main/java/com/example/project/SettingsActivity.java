@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -15,8 +16,6 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 
-
-        // the setting title of our action bar.
         getSupportActionBar().setTitle("Settings");
 
 
@@ -29,7 +28,7 @@ public class SettingsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        // check frame layout is empty or not.
+
         if (findViewById(R.id.idFrameLayout) != null) {
             if (savedInstanceState != null) {
                 return;
@@ -37,6 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             getFragmentManager().beginTransaction().add(R.id.idFrameLayout, new RealSetting()).commit();
         }
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -49,6 +49,15 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
+
+            Preference logOut = findPreference(getString(R.string.logoutButton));
+            logOut.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                public boolean onPreferenceClick(Preference preference) {
+
+                    return true;
+                }
+            });
         }
+
     }
 }
