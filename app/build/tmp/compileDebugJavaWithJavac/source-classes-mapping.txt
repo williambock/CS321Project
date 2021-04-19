@@ -1,10 +1,5 @@
-com/example/project/LoginActivity.java
- com.example.project.LoginActivity
- com.example.project.LoginActivity$1
- com.example.project.LoginActivity$2
- com.example.project.LoginActivity$3
- com.example.project.LoginActivity$4
- com.example.project.LoginActivity$5
+com/example/project/ui/main/Home.java
+ com.example.project.ui.main.Home
 com/example/project/RealSetting.java
  com.example.project.RealSetting
 com/example/project/ui/main/PlaceholderFragment.java
@@ -20,14 +15,11 @@ com/example/project/RegisterUser.java
  com.example.project.RegisterUser
  com.example.project.RegisterUser$1
  com.example.project.RegisterUser$2
-com/example/project/PostActivity.java
- com.example.project.PostActivity
- com.example.project.PostActivity$1
- com.example.project.PostActivity$2
-com/example/project/MainActivity.java
- com.example.project.MainActivity
- com.example.project.MainActivity$1
- com.example.project.MainActivity$2
+com/example/project/ui/main/SectionsPagerAdapter.java
+ com.example.project.ui.main.SectionsPagerAdapter
+com/example/project/ui/main/PageViewModel.java
+ com.example.project.ui.main.PageViewModel
+ com.example.project.ui.main.PageViewModel$1
 com/example/project/Settings.java
  com.example.project.Settings
 com/example/project/Home.java
@@ -38,13 +30,24 @@ com/example/project/ui/main/Settings.java
  com.example.project.ui.main.Settings
 com/example/project/ui/main/Messages.java
  com.example.project.ui.main.Messages
-com/example/project/ui/main/Home.java
- com.example.project.ui.main.Home
-com/example/project/ui/main/PageViewModel.java
- com.example.project.ui.main.PageViewModel
- com.example.project.ui.main.PageViewModel$1
-com/example/project/ui/main/SectionsPagerAdapter.java
- com.example.project.ui.main.SectionsPagerAdapter
+com/example/project/Post.java
+ com.example.project.Post
+com/example/project/LoginActivity.java
+ com.example.project.LoginActivity
+ com.example.project.LoginActivity$1
+ com.example.project.LoginActivity$2
+ com.example.project.LoginActivity$3
+ com.example.project.LoginActivity$4
+ com.example.project.LoginActivity$5
+com/example/project/PostActivity.java
+ com.example.project.PostActivity
+ com.example.project.PostActivity$1
+ com.example.project.PostActivity$2
+com/example/project/MainActivity.java
+ com.example.project.MainActivity
+ com.example.project.MainActivity$1
+ com.example.project.MainActivity$2
+ com.example.project.MainActivity$3
 com/example/project/SettingsActivity.java
  com.example.project.SettingsActivity
  com.example.project.SettingsActivity$SettingsFragment
