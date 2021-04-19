@@ -9,12 +9,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import android.util.Log;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SettingsActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
+        mAuth = FirebaseAuth.getInstance();
+
 
         getSupportActionBar().setTitle("Settings");
 
@@ -53,11 +63,11 @@ public class SettingsActivity extends AppCompatActivity {
             Preference logOut = findPreference(getString(R.string.logoutButton));
             logOut.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
-
+                    FirebaseAuth.getInstance().signOut();
                     return true;
                 }
             });
         }
-
     }
+
 }
