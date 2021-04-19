@@ -18,67 +18,65 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterUser extends AppCompatActivity {
 
-        private EditText email, password;
-        private Button register;
+    private EditText email, password;
+    private Button register;
 
-        private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_register_user);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register_user);
 
-            //Intent intent = new Intent(RegisterUserActivity.this, LoginActivity.class);
-            //startActivity(intent);
+        //Intent intent = new Intent(RegisterUserActivity.this, LoginActivity.class);
+        //startActivity(intent);
 
-            mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        email=findViewById(R.id.Email);
+        password=findViewById(R.id.Password);
+        register =findViewById(R.id.Register);
 
-            initialize();
-
-            register.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v){
-                    registerUser();
-                }
-            });
-        }
-
-        private void registerUser() {
-            String userEmail, userPassword;
-            userEmail = email.getText().toString();
-            userPassword = password.getText().toString();
-            //Toast.makeText(getApplicationContext(), userEmail, Toast.LENGTH_LONG).show();
-            //Toast.makeText(getApplicationContext(), userPassword, Toast.LENGTH_LONG).show();
-            if (TextUtils.isEmpty(userEmail)) {
-                Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
-                return;
+        register.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                registerUser();
             }
-            if (TextUtils.isEmpty(userPassword)) {
-                Toast.makeText(getApplicationContext(), "Please enter Password...", Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            mAuth.createUserWithEmailAndPassword(userEmail, userPassword)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_LONG).show();
-
-                                Intent intent = new Intent(RegisterUser.this, LoginActivity.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(RegisterUser.this, RegisterUser.class);
-                                startActivity(intent);
-                            }
-                        }
-                    });
-        }
-
-        private void initialize(){
-            email=findViewById(R.id.Email);
-            password=findViewById(R.id.Password);
-            register =findViewById(R.id.Register);
-        }
+        });
     }
+
+    /**
+     * this method calls Google API to register the user with Firebase Auth
+     */
+    private void registerUser() {
+        String userEmail, userPassword;
+        userEmail = email.getText().toString();
+        userPassword = password.getText().toString();
+        //Toast.makeText(getApplicationContext(), userEmail, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), userPassword, Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(userEmail)) {//ensure email isn't empty
+            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(userPassword)) {//ensure password isn't empty
+            Toast.makeText(getApplicationContext(), "Please enter Password...", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(userEmail, userPassword)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Registered!", Toast.LENGTH_LONG).show();
+
+                            Intent intent = new Intent(RegisterUser.this, LoginActivity.class);//send the user to sign in on success
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(RegisterUser.this, RegisterUser.class);//relaunch on fail to try again
+                            startActivity(intent);
+                        }
+                    }
+                });
+    }
+}

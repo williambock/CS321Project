@@ -23,6 +23,7 @@
     <string name="CreateAccount"> Create Account</string>
     <string name="CreateMessage"> Click here to Create Account</string>
     <string name="title_activity_register_user">RegisterUser</string>
+    <string name="ForgotButton">Forgot Password</string>
     <string name="add_post">Add Post</string>
     <string name="post">Post</string>
     <string name="back">Back</string>
