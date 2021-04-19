@@ -6,27 +6,6 @@ import android.preference.PreferenceFragment;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
-
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.Menu;
-import android.view.MenuItem;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.project.ui.main.SectionsPagerAdapter;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
-import android.view.View;
-import android.widget.Button;
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -44,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.project.ui.main.SectionsPagerAdapter;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -81,10 +61,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        loadPost();
     }
 
     private void loadPost() {
-        messagesRef.get()
+        messagesRef.orderBy("date", Query.Direction.ASCENDING)
+                .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
