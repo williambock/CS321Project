@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class PostActivity extends AppCompatActivity {
 
     private Button UpdatePostButton;  //Button to Submit a Post
     private Button BackToMainButton;  //Button to send user back to main
     private EditText NewPostText;     //Spot to enter text
     private String NewPostTextString; //String value for the text put in NewPostText
+    private FirebaseFirestore db = FirebaseFirestore.getInstance(); //Used for Firestore access
+    private FirebaseUser currentFirebaseUser; //Used to get the user's anonymous userID
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +71,10 @@ public class PostActivity extends AppCompatActivity {
      * Is intended to store the message (wherever that is)
      */
     private void StorePostToStorage() {
-        //Send the post to the storage space
-        //Not yet implemented
+        currentFirebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+        String post = NewPostTextString;
+        String userID = currentFirebaseUser.getUid();
+        Post message = new Post(post, userID);
+        db.collection("messages").add(message);
     }
 }
