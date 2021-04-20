@@ -10,6 +10,12 @@
             app:useSimpleSummaryProvider="true" />
 
 
+        <CheckBoxPreference
+            android:title="Night Mode"
+            android:defaultValue="false"
+            android:key="night"
+            />
+        
     </PreferenceCategory>
 
 
