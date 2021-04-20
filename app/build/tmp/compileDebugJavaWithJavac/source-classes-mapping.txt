@@ -16,6 +16,8 @@ com/example/project/ui/main/Recent.java
  com.example.project.ui.main.Recent
 com/example/project/Recent.java
  com.example.project.Recent
+com/example/project/BuildConfig.java
+ com.example.project.BuildConfig
 com/example/project/RegisterUser.java
  com.example.project.RegisterUser
  com.example.project.RegisterUser$1
@@ -44,3 +46,8 @@ com/example/project/ui/main/PageViewModel.java
  com.example.project.ui.main.PageViewModel$1
 com/example/project/ui/main/SectionsPagerAdapter.java
  com.example.project.ui.main.SectionsPagerAdapter
+com/example/project/SettingsActivity.java
+ com.example.project.SettingsActivity
+ com.example.project.SettingsActivity$SettingsFragment
+ com.example.project.SettingsActivity$SettingsFragment$1
+ com.example.project.SettingsActivity$SettingsFragment$2
