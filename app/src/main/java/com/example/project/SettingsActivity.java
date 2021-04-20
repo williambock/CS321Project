@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import android.util.Log;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class SettingsActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 

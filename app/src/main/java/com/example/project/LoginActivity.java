@@ -38,6 +38,12 @@ public class LoginActivity extends AppCompatActivity {
         createAccount=findViewById(R.id.CreateAccount);
         reset=findViewById(R.id.ForgotButton);
 
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser!=null){
+            Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
