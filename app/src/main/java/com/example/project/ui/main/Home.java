@@ -2,13 +2,23 @@ package com.example.project.ui.main;
 
 import android.os.Bundle;
 
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.project.Post;
 import com.example.project.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,12 +29,19 @@ public class Home extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static Post[] postList;
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public View view;
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference messagesRef = db.collection("messages");
+
+    private NavigationView navView;
+    private DrawerLayout drawLayout;
+    private RecyclerView posts;
+
+    //private Post[] postList;
 
     public Home() {
         // Required empty public constructor
@@ -39,11 +56,10 @@ public class Home extends Fragment {
      * @return A new instance of fragment Home.
      */
     // TODO: Rename and change types and number of parameters
-    public static Home newInstance(String param1, String param2) {
+    public static Home newInstance(Post[] postsList) {
         Home fragment = new Home();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        postList = postsList;
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,16 +67,47 @@ public class Home extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        System.out.println("ONCREATE $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        System.out.println("ONCREATEVIEW ########################################################################");
+
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+        navView = (NavigationView) view.findViewById(R.id.navig_view);
+        drawLayout = (DrawerLayout) view.findViewById(R.id.drawer_layout);
+        posts = (RecyclerView) view.findViewById(R.id.all_users_post_list);
+        posts.setHasFixedSize(true);
+
+
+
+
+        return view;
+    }
+
+    public void onViewCreated (View view, Bundle savedInstanceState){
+        System.out.println("ONVIEWCREATED IS RUNNING ^^^^^^^^^^^^^^^^");
+        LinearLayoutManager linearManager = new LinearLayoutManager(getContext());
+        linearManager.setReverseLayout(true);
+        linearManager.setStackFromEnd(true);
+        posts.setLayoutManager(linearManager);
+        posts.setLayoutManager(linearManager);
+
+
+        if(postList != null) {
+            RecyclerAdapter adapter = new RecyclerAdapter(getContext(), postList);
+            posts.setAdapter(adapter);
+        }
+        else {
+            System.out.println("postList is null, skipping");
+        }
+        RecyclerAdapter adapter = new RecyclerAdapter(getContext(), postList);
+        posts.setAdapter(adapter);
+
+
     }
 }

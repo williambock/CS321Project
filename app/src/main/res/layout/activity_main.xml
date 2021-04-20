@@ -48,5 +48,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:text="Setting" />
+        android:text="Settings" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

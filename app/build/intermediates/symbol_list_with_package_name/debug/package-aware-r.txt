@@ -1966,7 +1966,6 @@ id clip_vertical
 id clockwise
 id collapseActionView
 id confirm_button
-id constraintLayout
 id container
 id content
 id contentPanel
@@ -1976,6 +1975,7 @@ id coordinatorLayout
 id coordinatorLayout2
 id cos
 id counterclockwise
+id current_date
 id custom
 id customPanel
 id cut
@@ -2161,6 +2161,8 @@ id percent
 id pin
 id position
 id postLayout
+id post_text
+id poster_id
 id progress_circular
 id progress_horizontal
 id radio
@@ -2196,7 +2198,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id section_label
 id seekbar
 id seekbar_value
 id select_dialog_listview
@@ -2385,7 +2386,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout fragment_home
-layout fragment_main
 layout fragment_messages
 layout fragment_recent
 layout fragment_settings
@@ -2447,6 +2447,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post_layout
 layout preference
 layout preference_category
 layout preference_category_material

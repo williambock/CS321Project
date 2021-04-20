@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.project.Post;
+import com.example.project.ui.main.Home;
 import com.example.project.R;
 
 /**
@@ -20,9 +22,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public Post[] postList;
+
+    public SectionsPagerAdapter(Context context, FragmentManager fm, Post[] posts) {
         super(fm);
         mContext = context;
+        postList = posts;
     }
 
     @Override
@@ -30,16 +35,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         if(position == 0) {
-            return Home.newInstance("Home1", "Home2");
-        }
-        else if(position == 1) {
-            return Recent.newInstance("Home1", "Home2");
-        }
-        else if(position == 2) {
-            return Messages.newInstance("Home1", "Home2");
+            System.out.println("new instance of Home being created *******************");
+            if(postList == null) {
+                System.out.println("WARNING, postList is null *******************");
+            }
+            return Home.newInstance(postList);
         }
         else {
-            return Settings.newInstance("Home1", "Home2");
+            return Recent.newInstance("Home1", "Home2");
         }
     }
 
@@ -53,5 +56,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         // Show 4 total pages.
         return 2;
+    }
+
+    public void updatePostList(Post[] allPosts) {
+        postList = allPosts;
+        if(postList == null) {
+            System.out.println("THE POST LIST IS NULLASJUIFIAUWEHFIUEFWIUENIFUIUEANFIUJNE");
+        }
+        else {
+            System.out.println("THE POST LIST IS NOT NULL");
+        }
     }
 }
