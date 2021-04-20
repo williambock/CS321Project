@@ -3,6 +3,7 @@ package com.example.project;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,12 +15,6 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
-import android.view.MenuItem;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.project.ui.main.SectionsPagerAdapter;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -27,11 +22,15 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button settingsBtn;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference messagesRef = db.collection("messages");
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
+        mAuth=FirebaseAuth.getInstance();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent=new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
