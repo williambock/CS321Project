@@ -68,6 +68,22 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
+            
+            CheckBoxPreference checkboxPref = (CheckBoxPreference) getPreferenceManager().findPreference(getString(R.string.night));
+            //    CheckBoxPreference nightMode = findPreference(getString(R.string.night));
+            checkboxPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    boolean yes = (boolean) newValue;
+                    if (yes) {
+                        getListView().setBackgroundColor(Color.parseColor("#222222"));
+                    }
+                    else {
+                        getListView().setBackgroundColor(Color.parseColor("#ffffff"));
+                    }
+
+                    return true;
+                }
+            });
         }
     }
 
