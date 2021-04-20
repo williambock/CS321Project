@@ -34,4 +34,5 @@
     <string name="attachment_summary_off">Attachment Summary Off</string>
     <string name="attachment_summary_on">attachment_summary_on</string>
     <string name="attachment_title">string/attachment_title</string>
+    <string name="night">night</string>
 </resources>
