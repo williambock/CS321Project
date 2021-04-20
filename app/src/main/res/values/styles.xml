@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Project">
+        <item name="colorPrimary">@color/colorwhite</item>
+
+    </style>
+
+
+    <style name="Dark" parent="Theme.Project">
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+</resources>
