@@ -1,22 +1,35 @@
 package com.example.project;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.CheckBoxPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.example.project.ui.main.Settings;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import android.util.Log;
+import com.google.firebase.auth.FirebaseUser;
+
+
 public class SettingsActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
+        mAuth = FirebaseAuth.getInstance();
 
 
-        // the setting title of our action bar.
         getSupportActionBar().setTitle("Settings");
 
 
@@ -29,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        // check frame layout is empty or not.
+
         if (findViewById(R.id.idFrameLayout) != null) {
             if (savedInstanceState != null) {
                 return;
@@ -37,6 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             getFragmentManager().beginTransaction().add(R.id.idFrameLayout, new RealSetting()).commit();
         }
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -49,6 +63,31 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
+
+            Preference logOut = findPreference(getString(R.string.logoutButton));
+            logOut.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                public boolean onPreferenceClick(Preference preference) {
+                    FirebaseAuth.getInstance().signOut();
+                    return true;
+                }
+            });
+
+            CheckBoxPreference checkboxPref = (CheckBoxPreference) getPreferenceManager().findPreference(getString(R.string.night));
+            //    CheckBoxPreference nightMode = findPreference(getString(R.string.night));
+            checkboxPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    boolean yes = (boolean) newValue;
+                    if (yes) {
+                        getListView().setBackgroundColor(Color.parseColor("#222222"));
+                    }
+                    else {
+                        getListView().setBackgroundColor(Color.parseColor("#ffffff"));
+                    }
+
+                    return true;
+                }
+            });
         }
     }
+
 }

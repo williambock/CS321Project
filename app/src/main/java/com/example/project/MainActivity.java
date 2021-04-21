@@ -22,6 +22,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project.ui.main.SectionsPagerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -35,10 +37,17 @@ public class MainActivity extends AppCompatActivity {
     private CollectionReference messagesRef = db.collection("messages");
     private Post[] allPosts;
     private SectionsPagerAdapter sectionsPagerAdapter;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth=FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            Intent intent=new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
         loadPost();
 
         setContentView(R.layout.activity_main);

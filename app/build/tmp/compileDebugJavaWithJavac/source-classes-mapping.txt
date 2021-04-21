@@ -1,7 +1,7 @@
 com/example/project/Post.java
  com.example.project.Post
-com/example/project/ui/main/Messages.java
- com.example.project.ui.main.Messages
+com/example/project/ui/main/Home.java
+ com.example.project.ui.main.Home
 com/example/project/RealSetting.java
  com.example.project.RealSetting
 com/example/project/ui/main/Recent.java
@@ -17,21 +17,21 @@ com/example/project/RegisterUser.java
 com/example/project/ui/main/PageViewModel.java
  com.example.project.ui.main.PageViewModel
  com.example.project.ui.main.PageViewModel$1
-com/example/project/ui/main/Settings.java
- com.example.project.ui.main.Settings
-com/example/project/Settings.java
- com.example.project.Settings
-com/example/project/Messages.java
- com.example.project.Messages
-com/example/project/HelperActivity.java
- com.example.project.HelperActivity
 com/example/project/ui/main/SectionsPagerAdapter.java
  com.example.project.ui.main.SectionsPagerAdapter
-com/example/project/ui/main/Home.java
- com.example.project.ui.main.Home
+com/example/project/Settings.java
+ com.example.project.Settings
 com/example/project/ui/main/RecyclerAdapter.java
  com.example.project.ui.main.RecyclerAdapter
  com.example.project.ui.main.RecyclerAdapter$ViewHolder
+com/example/project/Messages.java
+ com.example.project.Messages
+com/example/project/ui/main/Settings.java
+ com.example.project.ui.main.Settings
+com/example/project/ui/main/Messages.java
+ com.example.project.ui.main.Messages
+com/example/project/HelperActivity.java
+ com.example.project.HelperActivity
 com/example/project/LoginActivity.java
  com.example.project.LoginActivity
  com.example.project.LoginActivity$1
@@ -51,3 +51,5 @@ com/example/project/MainActivity.java
 com/example/project/SettingsActivity.java
  com.example.project.SettingsActivity
  com.example.project.SettingsActivity$SettingsFragment
+ com.example.project.SettingsActivity$SettingsFragment$1
+ com.example.project.SettingsActivity$SettingsFragment$2
