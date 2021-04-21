@@ -27,6 +27,11 @@ com/example/project/HelperActivity.java
  com.example.project.HelperActivity
 com/example/project/ui/main/SectionsPagerAdapter.java
  com.example.project.ui.main.SectionsPagerAdapter
+com/example/project/ui/main/Home.java
+ com.example.project.ui.main.Home
+com/example/project/ui/main/RecyclerAdapter.java
+ com.example.project.ui.main.RecyclerAdapter
+ com.example.project.ui.main.RecyclerAdapter$ViewHolder
 com/example/project/LoginActivity.java
  com.example.project.LoginActivity
  com.example.project.LoginActivity$1
@@ -38,16 +43,11 @@ com/example/project/PostActivity.java
  com.example.project.PostActivity
  com.example.project.PostActivity$1
  com.example.project.PostActivity$2
-com/example/project/ui/main/Home.java
- com.example.project.ui.main.Home
 com/example/project/MainActivity.java
  com.example.project.MainActivity
  com.example.project.MainActivity$1
  com.example.project.MainActivity$2
  com.example.project.MainActivity$3
-com/example/project/ui/main/RecyclerAdapter.java
- com.example.project.ui.main.RecyclerAdapter
- com.example.project.ui.main.RecyclerAdapter$ViewHolder
 com/example/project/SettingsActivity.java
  com.example.project.SettingsActivity
  com.example.project.SettingsActivity$SettingsFragment

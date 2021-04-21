@@ -97,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
                         HelperActivity helper = HelperActivity.getInstance();
                         helper.helperPosts = allPosts;
                         System.out.println("POSTS HAVE LOADED, POSTS HAVE UPDATED &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+                        if(helper.startUp){
+                            helper.startUp=false;
+                            finish();
+                            startActivity(getIntent());
+                        }
                     }
                 });
         /*messagesRef.orderBy("date", Query.Direction.ASCENDING)
