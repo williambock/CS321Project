@@ -10,23 +10,14 @@
             app:useSimpleSummaryProvider="true" />
 
 
-    </PreferenceCategory>
-
-
-    <PreferenceCategory app:title="@string/sync_header">
-
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
-
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+        <CheckBoxPreference
+            android:title="Night Mode"
+            android:defaultValue="false"
+            android:key="night"
+            />
 
     </PreferenceCategory>
+
 
 
     <PreferenceCategory app:title="Notification">
@@ -42,5 +33,9 @@
             app:title="Message Notifications" />
     </PreferenceCategory>
 
+    <Preference
+        android:title="Logout"
+        android:key="@string/logoutButton"
+        />
 
 </PreferenceScreen>

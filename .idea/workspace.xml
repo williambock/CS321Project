@@ -29,11 +29,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4717cd87-a724-437e-b0ad-93e48b7005d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project/SettingsActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <recent name="com.example.project.ui.main" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.LoginActivity">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -345,30 +342,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1163" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1618945791783" />
-    <state width="1071" height="248" key="GridCell.Tab.0.bottom" timestamp="1618967966524">
+    <state width="1069" height="248" key="GridCell.Tab.0.bottom" timestamp="1618968411730">
       <screen x="0" y="25" width="1680" height="944" />
     </state>
     <state width="839" height="157" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1618962359782" />
     <state width="1463" height="247" key="GridCell.Tab.0.bottom/0.25.1680.938@0.25.1680.938" timestamp="1617932668488" />
-    <state width="1071" height="248" key="GridCell.Tab.0.bottom/0.25.1680.944@0.25.1680.944" timestamp="1618967966524" />
-    <state width="1071" height="248" key="GridCell.Tab.0.center" timestamp="1618967966522">
+    <state width="1069" height="248" key="GridCell.Tab.0.bottom/0.25.1680.941@0.25.1680.941" timestamp="1618968385553" />
+    <state width="1069" height="248" key="GridCell.Tab.0.bottom/0.25.1680.944@0.25.1680.944" timestamp="1618968411730" />
+    <state width="1069" height="248" key="GridCell.Tab.0.center" timestamp="1618968411729">
       <screen x="0" y="25" width="1680" height="944" />
     </state>
     <state width="839" height="157" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1618962359782" />
     <state width="1463" height="247" key="GridCell.Tab.0.center/0.25.1680.938@0.25.1680.938" timestamp="1617932668487" />
-    <state width="1071" height="248" key="GridCell.Tab.0.center/0.25.1680.944@0.25.1680.944" timestamp="1618967966522" />
-    <state width="1071" height="248" key="GridCell.Tab.0.left" timestamp="1618967966521">
+    <state width="1069" height="248" key="GridCell.Tab.0.center/0.25.1680.941@0.25.1680.941" timestamp="1618968385552" />
+    <state width="1069" height="248" key="GridCell.Tab.0.center/0.25.1680.944@0.25.1680.944" timestamp="1618968411729" />
+    <state width="1069" height="248" key="GridCell.Tab.0.left" timestamp="1618968411728">
       <screen x="0" y="25" width="1680" height="944" />
     </state>
     <state width="839" height="157" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1618962359781" />
     <state width="1463" height="247" key="GridCell.Tab.0.left/0.25.1680.938@0.25.1680.938" timestamp="1617932668487" />
-    <state width="1071" height="248" key="GridCell.Tab.0.left/0.25.1680.944@0.25.1680.944" timestamp="1618967966521" />
-    <state width="1071" height="248" key="GridCell.Tab.0.right" timestamp="1618967966523">
+    <state width="1069" height="248" key="GridCell.Tab.0.left/0.25.1680.941@0.25.1680.941" timestamp="1618968385552" />
+    <state width="1069" height="248" key="GridCell.Tab.0.left/0.25.1680.944@0.25.1680.944" timestamp="1618968411728" />
+    <state width="1069" height="248" key="GridCell.Tab.0.right" timestamp="1618968411729">
       <screen x="0" y="25" width="1680" height="944" />
     </state>
     <state width="839" height="157" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1618962359782" />
     <state width="1463" height="247" key="GridCell.Tab.0.right/0.25.1680.938@0.25.1680.938" timestamp="1617932668487" />
-    <state width="1071" height="248" key="GridCell.Tab.0.right/0.25.1680.944@0.25.1680.944" timestamp="1618967966523" />
+    <state width="1069" height="248" key="GridCell.Tab.0.right/0.25.1680.941@0.25.1680.941" timestamp="1618968385552" />
+    <state width="1069" height="248" key="GridCell.Tab.0.right/0.25.1680.944@0.25.1680.944" timestamp="1618968411729" />
     <state x="884" y="164" key="SettingsEditor" timestamp="1617747771062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
